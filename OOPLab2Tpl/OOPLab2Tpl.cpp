@@ -13,24 +13,29 @@ int main()
 {
     cout << "OOP. Template for laboratory work #2.\n";
 
-    char ch = '5';
+    char ch;
     do {
-        system("cls");
+        // system("cls"); 
         MenuTask();
-        ch = cin.get();
-        
-        cin.get();
+
+        cout << "\nYour choice: ";
+        cin >> ch;
 
         switch (ch) {
-        case '1': task1();   break;
-        case '2': task1();   break;
-        case '3': task1();   break;
-        case '4': task1();   break;
-		case '5':  Examples(); break;
-		case '6': return 0;
-	    }
-        cout << " Press any key and enter\n";
-        ch = cin.get();
+        case '1': task1(); break;
+        case '2': task2(); break;
+        case '3': task3(); break;
+        case '4': task4(); break;
+        case '5': Examples(); break;
+        case '6': return 0;
+        default:
+            cout << "Wrong item, try again." << endl;
+            break;
+        }
+
+        cout << "\nPress Enter to continue...";
+        cin.ignore(10000, '\n');
+        cin.get();               
     } while (ch != '6');
 
     return 0;
