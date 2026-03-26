@@ -82,7 +82,7 @@ void task2()
             temp_c >>= 1;
         }
         unsigned short r = 0;
-        r |= (b & 1);      
+        r |= (b & 1);      ///    b = 0101  01010    0000  0001  
         r |= (c << 1);     
         r |= (pos << 9);   
 
@@ -112,7 +112,7 @@ void task3()
     cout << "  Data encryption using structures with bit fields \n";
     struct MyBitFields {
         unsigned short bitp : 1;  
-        unsigned short symbol : 8; 
+        unsigned short symbol : 8;  // 0  0000 00000  0000 000 
         unsigned short pos : 7;  
     };
 
